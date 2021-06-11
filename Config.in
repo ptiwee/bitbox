@@ -1,0 +1,1 @@
+source "$BR2_EXTERNAL_BITBOX_PATH/package/retroarch/Config.in"
