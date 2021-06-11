@@ -1,1 +1,6 @@
 source "$BR2_EXTERNAL_BITBOX_PATH/package/retroarch/Config.in"
+source "$BR2_EXTERNAL_BITBOX_PATH/package/libretro-fbneo/Config.in"
+source "$BR2_EXTERNAL_BITBOX_PATH/package/libretro-genesisplusgx/Config.in"
+source "$BR2_EXTERNAL_BITBOX_PATH/package/libretro-nestopia/Config.in"
+source "$BR2_EXTERNAL_BITBOX_PATH/package/libretro-pcsx-rearmed/Config.in"
+source "$BR2_EXTERNAL_BITBOX_PATH/package/libretro-pocketsnes/Config.in"
