@@ -4,3 +4,6 @@ source "$BR2_EXTERNAL_BITBOX_PATH/package/libretro-genesisplusgx/Config.in"
 source "$BR2_EXTERNAL_BITBOX_PATH/package/libretro-nestopia/Config.in"
 source "$BR2_EXTERNAL_BITBOX_PATH/package/libretro-pcsx-rearmed/Config.in"
 source "$BR2_EXTERNAL_BITBOX_PATH/package/libretro-pocketsnes/Config.in"
+
+source "$BR2_EXTERNAL_BITBOX_PATH/package/rpi_ws281x/Config.in"
+source "$BR2_EXTERNAL_BITBOX_PATH/package/retroleds/Config.in"
