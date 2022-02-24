@@ -13,6 +13,8 @@ endef
 
 define RETROLEDS_INSTALL_TARGET_CMDS
 	$(INSTALL) -m 755 -D $(@D)/retroleds $(TARGET_DIR)/usr/bin/retroleds
+	$(INSTALL) -D -m 0755 $(BR2_EXTERNAL)/package/retroleds/S00retroleds \
+		$(TARGET_DIR)/etc/init.d/S00retroleds
 endef
 
 $(eval $(generic-package))
