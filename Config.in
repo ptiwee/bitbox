@@ -11,3 +11,5 @@ source "$BR2_EXTERNAL_BITBOX_PATH/package/retroleds/Config.in"
 source "$BR2_EXTERNAL_BITBOX_PATH/package/sfml/Config.in"
 source "$BR2_EXTERNAL_BITBOX_PATH/package/attractmode/Config.in"
 
+source "$BR2_EXTERNAL_BITBOX_PATH/package/mk_arcade_joystick_rpi/Config.in"
+

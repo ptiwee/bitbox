@@ -1,0 +1,2 @@
+config BR2_PACKAGE_MK_ARCADE_JOYSTICK_RPI
+	bool "mk_arcade_joystick_rpi"
