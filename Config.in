@@ -13,3 +13,4 @@ source "$BR2_EXTERNAL_BITBOX_PATH/package/attractmode/Config.in"
 
 source "$BR2_EXTERNAL_BITBOX_PATH/package/mk_arcade_joystick_rpi/Config.in"
 
+source "$BR2_EXTERNAL_BITBOX_PATH/package/bbsplash/Config.in"

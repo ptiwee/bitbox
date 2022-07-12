@@ -1,0 +1,5 @@
+config BR2_PACKAGE_BBSPLASH
+    bool "bbsplash"
+    select BR2_PACKAGE_FBV
+    help
+        Graphical splash for BitBox OS
