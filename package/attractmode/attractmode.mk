@@ -1,4 +1,4 @@
-ATTRACTMODE_VERSION = v2.6.1
+ATTRACTMODE_VERSION = v2.6.2
 ATTRACTMODE_SITE = https://github.com/mickelson/attract.git
 ATTRACTMODE_SITE_METHOD = git
 ATTRACTMODE_DEPENDENCIES = ffmpeg sfml zlib
