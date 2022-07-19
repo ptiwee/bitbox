@@ -11,8 +11,8 @@ endef
 MK_ARCADE_JOYSTICK_RPI_PRE_CONFIGURE_HOOKS += MK_ARCADE_JOYSTICK_RPI_RPI2_HOOK
 
 define MK_ARCADE_JOYSTICK_RPI_INSTALL_TARGET_CMDS
-	$(INSTALL) -D -m 0755 $(BR2_EXTERNAL)/package/mk_arcade_joystick_rpi/S99arcade \
-		$(TARGET_DIR)/etc/init.d/S99arcade
+	$(INSTALL) -D -m 0755 $(BR2_EXTERNAL)/package/mk_arcade_joystick_rpi/S30joystick \
+		$(TARGET_DIR)/etc/init.d/S30joystick
 endef
 
 $(eval $(kernel-module))
