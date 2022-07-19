@@ -1,0 +1,5 @@
+config BR2_PACKAGE_ATTRACT_BITBOX_LAYOUT
+    bool "attract-bitbox-layout"
+    depends on BR2_PACKAGE_ATTRACTMODE
+    help
+        Custom theme for Attract Mode
