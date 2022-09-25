@@ -9,7 +9,7 @@ if [ -e ${TARGET_DIR}/etc/inittab ]; then
     grep -qE 'attract' ${TARGET_DIR}/etc/inittab || \
     sed -i 's/^tty1/#&/' ${TARGET_DIR}/etc/inittab
     grep -qE 'attract' ${TARGET_DIR}/etc/inittab || \
-	sed -i '/tty1/a\tty1::respawn:/usr/bin/attract -f dejavu > /dev/console 2>&1 # Attract Mode' ${TARGET_DIR}/etc/inittab
+	sed -i '/tty1/a\tty1::respawn:/usr/bin/attract -c /tmp/attract > /dev/console 2>&1 # Attract Mode' ${TARGET_DIR}/etc/inittab
 fi
 
 # Enable audio
