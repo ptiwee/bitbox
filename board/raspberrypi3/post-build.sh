@@ -21,6 +21,12 @@ if [ ! -e ${TARGET_DIR}/etc/asound.conf ]; then
     echo 'defaults.ctl.card 1' >> ${TARGET_DIR}/etc/asound.conf
 fi
 
+# Increase GPU memory
+grep -qE 'gpu_mem=256' ${BASE_DIR}/images/rpi-firmware/config.txt || \
+sed -i 's/^gpu_mem/#&/' ${BASE_DIR}/images/rpi-firmware/config.txt
+grep -qE 'gpu_mem=256' ${BASE_DIR}/images/rpi-firmware/config.txt || \
+echo 'gpu_mem=256' >> ${BASE_DIR}/images/rpi-firmware/config.txt
+
 # Disable splash
 grep -qE 'disable_splash=1' ${BASE_DIR}/images/rpi-firmware/config.txt || \
 echo 'disable_splash=1' >> ${BASE_DIR}/images/rpi-firmware/config.txt
