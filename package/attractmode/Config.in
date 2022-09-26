@@ -1,10 +1,12 @@
 config BR2_PACKAGE_ATTRACTMODE
 	bool "attractmode"
+    depends on BR2_PACKAGE_EUDEV
 	select BR2_PACKAGE_DEJAVU
 	select BR2_PACKAGE_FFMPEG
 	select BR2_PACKAGE_FFMPEG_SWSCALE
 	select BR2_PACKAGE_SFML
     select BR2_PACKAGE_ZLIB
+    select BR2_PACKAGE_RPI_USERLAND
 	help
 	  A graphical front-end for command line emulators that hides
 	  the underlying operating system and is intended to be
