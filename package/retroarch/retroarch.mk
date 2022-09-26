@@ -1,4 +1,4 @@
-RETROARCH_VERSION = v1.10.0
+RETROARCH_VERSION = v1.10.3
 RETROARCH_SITE = https://github.com/libretro/RetroArch.git
 RETROARCH_SITE_METHOD = git
 RETROARCH_DEPENDENCIES = host-pkgconf sdl2 alsa-lib
