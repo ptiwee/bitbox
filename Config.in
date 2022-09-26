@@ -18,3 +18,5 @@ source "$BR2_EXTERNAL_BITBOX_PATH/package/attract-bitbox-layout/Config.in"
 source "$BR2_EXTERNAL_BITBOX_PATH/package/mk_arcade_joystick_rpi/Config.in"
 
 source "$BR2_EXTERNAL_BITBOX_PATH/package/bbsplash/Config.in"
+source "$BR2_EXTERNAL_BITBOX_PATH/package/bbinit/Config.in"
+source "$BR2_EXTERNAL_BITBOX_PATH/package/bbconfigs/Config.in"

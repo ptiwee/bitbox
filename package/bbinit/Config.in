@@ -1,0 +1,6 @@
+config BR2_PACKAGE_BBINIT
+    bool "bbinit"
+    select BR2_PACKAGE_DOSFSTOOLS
+    select BR2_PACKAGE_DOSFSTOOLS_FSCK_FAT 
+    help
+        BitBox OS init script

@@ -1,0 +1,81 @@
+platforms="arcade|zip
+gameboy|gb
+gamegear|gg
+gba|gba
+gbc|gbc
+megadrive|md
+neogeo|zip
+nes|nes
+ngpx|ngc
+psx|cue
+sms|sms
+snes|sfc"
+
+romsdir=/mnt
+attractdir=/tmp/attract
+
+# Wait for USB
+while :
+do
+    if [ -e "/dev/sda1" ]; then
+        # Repair filesystem
+        fsck.vfat -a /dev/sda1
+        mount /dev/sda1 $romsdir
+        break
+    fi
+    sleep 1
+done
+
+mkdir -p $attractdir
+mkdir -p $attractdir/romlists
+cp /usr/share/attract/default-config.cfg $attractdir/attract.cfg
+
+mkdir -p $romsdir/bitbox/saves
+
+for info in $platforms
+do
+    platform=$(echo "$info" | cut -d\| -f1)
+    platform_ext=$(echo "$info" | cut -d\| -f2)
+
+    for rom in $romsdir/$platform/*.$platform_ext
+    do
+        if [ -f "$rom" ]; then
+            ext=$(basename "$rom" | sed "s/^.*\.\(.*$\)$/\1/")
+            basename=$(basename "$rom")
+            name=$(echo "$basename" | sed "s/^\(.*\)\..*$/\1/")
+            valid=1
+
+            title=$name
+            manufacturer=""
+            year=""
+            extra=""
+
+            if [ -f $romsdir/$platform/titles.txt ]; then
+                if grep -q "$basename" $romsdir/$platform/titles.txt; then
+                    title=$(grep "$basename" $romsdir/$platform/titles.txt | cut -d':' -f2)
+                fi
+            fi
+
+            if [ -f $romsdir/$platform/blacklist.txt ]; then
+                grep -q "$basename" $romsdir/$platform/blacklist.txt
+                if [ $? == 0 ]; then
+                    valid=0
+                fi
+            fi
+
+            if [ $valid == 1 ]; then
+                echo "$name;$title;$platform;;$year;$manufacturer;;;;;;;;;;$extra" >> "$attractdir/romlists/$platform.txt"
+            fi
+        fi
+    done
+
+    if [ -f $attractdir/romlists/$platform.txt ]; then
+        # Sort by titles
+        sort -k 2 -f ";" $attractdir/romlists/$platform.txt -o $attractdir/romlists/$platform.txt
+
+        # Enable the display
+        sed -i "/display\s$platform/{n;n;n;s/no/yes/}" $attractdir/attract.cfg
+    fi
+done
+
+sync

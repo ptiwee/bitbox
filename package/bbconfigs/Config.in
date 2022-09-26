@@ -1,0 +1,4 @@
+config BR2_PACKAGE_BBCONFIGS
+    bool "bbconfigs"
+    help
+        BitBox OS default configurations
