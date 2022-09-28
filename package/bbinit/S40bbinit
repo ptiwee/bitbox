@@ -71,7 +71,7 @@ do
 
     if [ -f $attractdir/romlists/$platform.txt ]; then
         # Sort by titles
-        sort -k 2 -f ";" $attractdir/romlists/$platform.txt -o $attractdir/romlists/$platform.txt
+        sort -k 2 -t ";" $attractdir/romlists/$platform.txt -o $attractdir/romlists/$platform.txt
 
         # Enable the display
         sed -i "/display\s$platform/{n;n;n;s/no/yes/}" $attractdir/attract.cfg
