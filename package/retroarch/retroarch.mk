@@ -1,9 +1,9 @@
-RETROARCH_VERSION = v1.10.3
-RETROARCH_SITE = https://github.com/libretro/RetroArch.git
+RETROARCH_VERSION = 256cd02
+RETROARCH_SITE = https://github.com/ptiwee/RetroArch.git
 RETROARCH_SITE_METHOD = git
 RETROARCH_DEPENDENCIES = host-pkgconf sdl2 alsa-lib
 
-RETROARCH_CONFIGURE_OPTS += --disable-materialui --disable-xmb --disable-ozone
+RETROARCH_CONFIGURE_OPTS += --disable-materialui --disable-xmb --disable-ozone --enable-rgui
 RETROARCH_CONFIGURE_OPTS += --enable-neon --enable-floathard --enable-dispmanx
 LIBRETRO_PLATFORM += armv8,unix,rpi3,neon,hardfloat,gles
 
