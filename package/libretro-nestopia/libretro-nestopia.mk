@@ -10,7 +10,7 @@ endef
 
 define LIBRETRO_NESTOPIA_INSTALL_TARGET_CMDS
 	$(INSTALL) -D $(@D)/libretro/nestopia_libretro.so \
-		$(TARGET_DIR)/usr/lib/libretro/libretro_nestopia.so
+		$(TARGET_DIR)/usr/lib/libretro/nestopia_libretro.so
 endef
 
 $(eval $(generic-package))

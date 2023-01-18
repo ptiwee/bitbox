@@ -10,7 +10,7 @@ endef
 
 define LIBRETRO_FBNEO_INSTALL_TARGET_CMDS
 	$(INSTALL) -D $(@D)/src/burner/libretro/fbneo_libretro.so \
-		$(TARGET_DIR)/usr/lib/libretro/libretro_fbneo.so
+		$(TARGET_DIR)/usr/lib/libretro/fbneo_libretro.so
 endef
 
 $(eval $(generic-package))

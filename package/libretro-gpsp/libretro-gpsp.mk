@@ -10,7 +10,7 @@ endef
 
 define LIBRETRO_GPSP_INSTALL_TARGET_CMDS
 	$(INSTALL) -D $(@D)/gpsp_libretro.so \
-		$(TARGET_DIR)/usr/lib/libretro/libretro_gpsp.so
+		$(TARGET_DIR)/usr/lib/libretro/gpsp_libretro.so
 endef
 
 $(eval $(generic-package))

@@ -10,7 +10,7 @@ endef
 
 define LIBRETRO_BEETLE_NGP_INSTALL_TARGET_CMDS
 	$(INSTALL) -D $(@D)/mednafen_ngp_libretro.so \
-		$(TARGET_DIR)/usr/lib/libretro/libretro_beetle_ngp.so
+		$(TARGET_DIR)/usr/lib/libretro/mednafen_ngp_libretro.so
 endef
 
 $(eval $(generic-package))

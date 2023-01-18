@@ -17,7 +17,7 @@ endef
 
 define LIBRETRO_POCKETSNES_INSTALL_TARGET_CMDS
 	$(INSTALL) -D $(@D)/snes9x2002_libretro.so \
-		$(TARGET_DIR)/usr/lib/libretro/libretro_pocketsnes.so
+		$(TARGET_DIR)/usr/lib/libretro/snes9x2002_libretro.so
 endef
 
 $(eval $(generic-package))
